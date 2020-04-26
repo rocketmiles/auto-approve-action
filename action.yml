@@ -1,12 +1,15 @@
-name: 'Auto Approve'
-description: 'Automatically approve pull requests'
+name: "Auto Approve"
+description: "Automatically approve pull requests"
 branding:
-  icon: 'check-circle'
-  color: 'green'
+  icon: "check-circle"
+  color: "green"
 inputs:
-  github-token:
-    description: 'The GITHUB_TOKEN secret'
+  github-token-one:
+    description: "The GITHUB_TOKEN secret for the first auto-approval"
     required: true
+  github-token-two:
+    description: "The GITHUB_TOKEN secret for the second auto-approval"
+    required: false
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: "node12"
+  main: "dist/index.js"
